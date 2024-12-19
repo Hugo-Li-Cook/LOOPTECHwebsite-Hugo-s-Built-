@@ -1,0 +1,353 @@
+header {
+  z-index: 1;
+  padding: 10px 0;
+}
+.logo {
+  width: 250px;
+  margin-left: -15px;
+
+  transform: scale(0.8); /* Scale the logo to 80% of its original size */
+  transform-origin: center; /* Ensure the scaling is centered */
+}
+.hero {
+  position: relative;
+  height: 60vh;
+
+  text-align: center;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hero p,
+.hero h1 {
+  color: #ffffff;
+}
+.hero-bg {
+  position: absolute;
+  background-color: #212529;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -20;
+  animation: bounce 5s infinite; /* Add bounce effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+.hero-bg1 {
+  position: absolute;
+  background-color: #212529;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -20;
+  animation: bounce 5s infinite; /* Add bounce effect */
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+
+.spaced-letters {
+  letter-spacing: 0.2em; /* Adjust the value as needed */
+}
+.intro {
+  z-index: 0;
+  background-color: #f8f9fa;
+}
+.introA {
+  z-index: 0;
+  background-color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bg-orange {
+  background-color: #ff6f00;
+}
+
+.bg-light {
+  background-color: #f8f9fa;
+}
+
+.shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.stats-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.col-md-2 h2 {
+  padding: 10px;
+}
+
+.col-md-10 p {
+  padding: 10px;
+}
+
+.footer-link {
+  color: #ff6f00;
+  text-decoration: none;
+}
+
+.color-text {
+  background: linear-gradient(
+    45deg,
+    #fe3636 0%,
+    #5d5df2 75%
+  ); /* Replace with your desired colors */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.row-text {
+  height: 15vh;
+  align-items: center;
+}
+
+.intro .row {
+  height: 20vh;
+  display: flex;
+  align-items: center;
+}
+
+.about .row {
+  height: 20vh;
+  display: flex;
+  align-items: center;
+}
+.contact-other {
+  background-color: #343a40;
+  padding: 3rem;
+}
+.contact-cook {
+  background-color: #f8f2f2;
+  padding: 3rem;
+}
+
+footer {
+  background-color: #16161a;
+  color: #ffffff;
+}
+
+footer h5 {
+  font-weight: bold;
+}
+
+footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+footer a:hover {
+  color: #ffc107; /* Highlight on hover */
+}
+
+.text-prime {
+  color: #ff6f00;
+}
+
+.nav-link {
+  text-decoration: none; /* Remove default underline */
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 5px;
+  display: block;
+  margin-top: 3px;
+  right: 0;
+  background: #ffa25b; /* Change to desired color */
+  transition: width 0.3s ease;
+  -webkit-transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+
+  background: #ffa25b; /* Change to desired color */
+}
+
+.current-page::after {
+  width: 100%;
+  background: #ff6f00; /* Change to desired color */
+}
+
+.tech {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card {
+  perspective: 1000px; /* Adds perspective for the tilt effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  transform-style: preserve-3d; /* Ensures child elements maintain 3D transform */
+}
+
+.card:hover {
+  transform: rotateX(5deg) rotateY(5deg) translateY(-5px); /* Tilts and elevates */
+  box-shadow: 1 15px 30px rgba(0, 0, 0, 1); /* More realistic shadow on hover */
+}
+
+.card-text {
+  height: 12.5vh;
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.values-card {
+  background-color: #ffffff;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* border: 2px solid #5D5DF2; Initial border width and color */
+  /* border-radius: 10px;  */
+  padding: 20px;
+}
+
+/* .values-card:hover { */
+/* border-width: 2px; */
+/* } */
+
+.team-card {
+  background-color: #ffffff;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid transparent; /* Set the border color and width */
+  border-radius: 10px; /* Adjust the value to make the corners more or less rounded */
+  padding: 1px;
+  background-image: linear-gradient(white, white),
+    linear-gradient(45deg, #fe3636 0%, #5d5df2 75%); /* Gradient background */
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  /* transition: all 0.3s ease-in-out; */
+}
+
+.team-card-text > p,
+.team-card-text > h6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Ensure the element takes up the full height of its container */
+  text-align: center; /* Center the text horizontally */
+  margin: 10px;
+}
+.team-card-text > h6 {
+  color: #606366;
+  font-weight: 650;
+}
+
+.team-card:hover {
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)),
+    linear-gradient(75deg, #5d5df2 0%, #fe3636 75%); /* Gradient background */
+}
+
+/* Customize the accordion header */
+.accordion-button {
+  font-size: 2rem; /* Adjust the font size */
+  color: #888888; /* Change the text color */
+  background-color: #f8f9fa; /* Change the background color */
+  border: none; /* Remove the border */
+}
+
+.accordion-button:not(.collapsed) {
+  color: #000000; /* Change the text color when expanded */
+  background-color: #e9ecef; /* Change the background color when expanded */
+}
+
+.accordion-button:focus {
+  box-shadow: none; /* Remove the focus outline */
+}
+
+/* Customize the accordion body */
+.accordion-body {
+  font-size: 1rem; /* Adjust the font size */
+  color: #555; /* Change the text color */
+  background-color: #ffffff; /* Change the background color */
+  border-top: 1px solid #e9ecef; /* Add a border to the top */
+}
+
+.featured-innovation {
+  background: #fff;
+  padding: 3rem 1rem;
+}
+
+.innovation-card {
+  border: none;
+}
+
+.innovation-card:hover {
+  transform: scale(1.03);
+}
+
+.innovation-card.selected {
+  background-color: #343a40; /* Dark background */
+  color: #ffffff; /* White text */
+}
+
+.innovation-card.selected .card-text,
+.innovation-card.selected .card-title {
+  color: #ffffff; /* Ensure text inside the card is white */
+}
+
+.card-body {
+  height: 250px;
+}
+.no-bullets {
+  list-style-type: none; /* Remove bullet points */
+  padding-left: 0; /* Optional: Remove default padding */
+}
+
+.persistent-contact .container {
+  position: relative;
+}
+
+.text-box {
+  position: absolute;
+  bottom: 50px; /* Gap of 50px from the bottom */
+  left: 50px; /* Gap of 50px from the left */
+  border-radius: 10px;
+  background-color: white;
+  width: 60%; /* Optional: Make the text-box take the full width */
+}
+.social-section .container {
+  position: relative;
+}
+
+.social-section img, .persistent-contact img{
+  height: 35vh;
+  width: 80vw;
+  object-fit: cover;
+}
+.social-section .text-box{
+  background-color: black;
+  color: white;
+}
+
+.social-icon {
+  color: white; /* Change the color of the icons to white */
+}
+
+.social-icon:hover {
+  color: #ff6f00; /* Optional: Change the color on hover */
+}
